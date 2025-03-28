@@ -46,12 +46,20 @@ with col2:
     desnivel_maximo = distancia * np.tan(theta)  # Correção na fórmula
 
     # Exibição do resultado
-    st.write(f"### **Desnível máximo permitido:** {desnivel_maximo:.2f} m")
+# Converter a cor RGB para hexadecimal
+cor_azul = "#0094DE"  # RGB(0, 148, 222)
+
+# Exibição do resultado com a nova cor e centralizado
+st.markdown(f'<h3 style="color:{cor_azul}; font-weight:bold; text-align:center;">'
+            f'Desnível máximo permitido: {desnivel_maximo:.2f} m</h3>',
+            unsafe_allow_html=True)
+
 
 # Informação no final em tamanho pequeno
-st.markdown('<p style="font-size: 10px; color: gray;">v 1.0.1<br>Autor: Luciano Pandolfi Hoffmann<br>'
+st.markdown('<p style="font-size: 10px; color: gray;">v 1.0.2<br>Autor: Luciano Pandolfi Hoffmann<br>'
             '<a href="https://www.performanceprotensao.com" target="_blank" style="font-size: 10px; color: gray;">www.performanceprotensao.com</a></p>',
             unsafe_allow_html=True)
 
 #1.0.0 versão inicial
 #1.0.1 ajustes imagens para streamlit cloud
+#1.0.2 ajustes cor do texto
